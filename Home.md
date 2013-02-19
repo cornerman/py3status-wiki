@@ -13,7 +13,8 @@ These limitations are there by design as said in the i3status man page:
 > In i3status, we don’t want to implement process management again. Therefore, there is no module to run arbitrary scripts or commands. Instead, you should use your shell.
 
 # Philosophy
-* `py3status` is **not** a replacement of i3status, its goal is to **extend** it while preserving all of i3status' advantages and configuration.
-* It is thus very easy to start using py3status as it won't interfere with your existing settings !
-* It is easy to hack into your i3bar and append your own stuff on it
+* Keep what i3status is good for and was designed to do (see above)...
+* Do **not** replace i3status but **extend** it instead so that we can preserve all of i3status' advantages and configuration
+* It is very easy to start using `py3status` as **it won't interfere with your existing settings** !
+* You can easily **write your own modules** and have them displayed on your i3bar automagically
 * It is easy to modify the existing modules output
