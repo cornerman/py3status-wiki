@@ -1,10 +1,11 @@
-You will love `py3status` if you're using [i3wm](http://i3wm.org/) and are frustrated by the [i3status](http://i3wm.org/i3status/) [limitations](https://faq.i3wm.org/question/459/external-scriptsprograms-in-i3status-without-loosing-colors/) on your i3bar such as:
+## About
+You will love `py3status` if you're using [i3wm](http://i3wm.org/) and are frustrated by the i3status [limitations](https://faq.i3wm.org/question/459/external-scriptsprograms-in-i3status-without-loosing-colors/) on your i3bar such as:
 * you cannot hack into it easily
 * you want more than the built-in modules and their limited configuration
 * you cannot pipe the result of one of more scripts or commands in your bar easily
 * you want to see the clock seconds increment in real time !
 
-These limitations are there by design as said in the i3status man page:
+These limitations are there by design as said in the [i3status](http://i3wm.org/i3status/) man page:
 
 > In general, i3status wants to display things which you would look at occasionally anyways, like the current date/time, whether you are connected to a WiFi network or not, and if you have enough disk space to fit that 4.3 GiB download.
 
@@ -12,9 +13,9 @@ These limitations are there by design as said in the i3status man page:
 
 > In i3status, we don’t want to implement process management again. Therefore, there is no module to run arbitrary scripts or commands. Instead, you should use your shell.
 
-# Philosophy
+## Achievements
 * Keep what i3status is good for and was designed to do (see above)
 * Do **not** replace i3status but **extend** it instead so that we can preserve all of i3status' advantages and configuration
-* It is very easy to start using `py3status` as **it won't interfere with your existing settings** !
+* It is very easy to start using `py3status` as **it won't interfere with your existing i3status settings**
+* It is easy to modify the existing i3status modules output
 * You can easily **write your own modules** and have them displayed on your i3bar automagically
-* It is easy to modify the existing modules output
