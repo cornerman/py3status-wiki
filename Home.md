@@ -1,1 +1,14 @@
-Welcome to the py3status wiki!
+# About
+
+You will love py3status if you're using i3wm and are frustrated by the i3status limitations on your i3bar such as:
+* you cannot hack into it easily
+* you want more than the built-in modules and their limited configuration
+* you cannot pipe the result of one of more scripts or commands in your bar easily
+
+These limitations are there by design as said in the i3status man page:
+
+> In general, i3status wants to display things which you would look at occasionally anyways, like the current date/time, whether you are connected to a WiFi network or not, and if you have enough disk space to fit that 4.3 GiB download.
+
+> However, if you need to look at some kind of information more than once in a while (like checking repeatedly how full your RAM is), you are probably better off with a script doing that, which pops up an alert when your RAM usage reaches a certain threshold. After all, the point of computers is not to burden you with additional boring tasks like repeatedly checking a number.
+
+> In i3status, we don’t want to implement process management again. Therefore, there is no module to run arbitrary scripts or commands. Instead, you should use your shell.
