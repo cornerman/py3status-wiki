@@ -2,6 +2,7 @@ You will love `py3status` if you're using i3wm and are frustrated by the i3statu
 * you cannot hack into it easily
 * you want more than the built-in modules and their limited configuration
 * you cannot pipe the result of one of more scripts or commands in your bar easily
+* you want to see the clock seconds increment in real time !
 
 These limitations are there by design as said in the i3status man page:
 
