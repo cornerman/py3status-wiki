@@ -1,6 +1,4 @@
-# About
-
-You will love py3status if you're using i3wm and are frustrated by the i3status limitations on your i3bar such as:
+You will love `py3status` if you're using i3wm and are frustrated by the i3status limitations on your i3bar such as:
 * you cannot hack into it easily
 * you want more than the built-in modules and their limited configuration
 * you cannot pipe the result of one of more scripts or commands in your bar easily
@@ -12,3 +10,9 @@ These limitations are there by design as said in the i3status man page:
 > However, if you need to look at some kind of information more than once in a while (like checking repeatedly how full your RAM is), you are probably better off with a script doing that, which pops up an alert when your RAM usage reaches a certain threshold. After all, the point of computers is not to burden you with additional boring tasks like repeatedly checking a number.
 
 > In i3status, we don’t want to implement process management again. Therefore, there is no module to run arbitrary scripts or commands. Instead, you should use your shell.
+
+# Philosophy
+* `py3status` is **not** a replacement of i3status, its goal is to **extend** it while preserving all of i3status' advantages and configuration.
+* It is thus very easy to start using py3status as it won't interfere with your existing settings !
+* It is easy to hack into your i3bar and append your own stuff on it
+* It is easy to modify the existing modules output
