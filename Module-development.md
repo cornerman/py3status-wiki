@@ -11,8 +11,4 @@ When called with the `-i PATH` parameter, `py3status` does the following :
 * Each method must return a **tuple** containing the **index** at which the output must be inserted in the final json and a i3bar-protocol compatible dict representing the output of your module.
 
 ## Example class
-This is a basic and useless class to illustrate the module system.
-
-`
-h
-`
+You can find an example class in the `examples` folder named **empty_class.py**
