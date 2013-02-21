@@ -1,4 +1,3 @@
-## Write your own modules !
 `py3status` allows you to easily write your own modules and have their output displayed on your i3bar. You can even choose where the output will be placed in your bar.
 
 ## How it works
