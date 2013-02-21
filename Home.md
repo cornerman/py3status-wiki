@@ -19,3 +19,10 @@ These limitations are there by design as said in the [i3status](http://i3wm.org/
 * It is very easy to start using `py3status` as **it won't interfere with your existing i3status settings**
 * It is easy to modify the existing i3status modules output
 * You can easily **write your own modules** and have them displayed on your i3bar automagically
+
+## Example
+This is an example screenshot of my current i3bar using py3status :
+![i3bar with py3status](http://ultrabug.fr/github/i3bar.png)
+
+* I am using a color-enabled i3status with the standard `py3status` transformations, the colors are meaningful enough to spare the ": yes/no" of the _run-watch_ modules, also the clock ticks for every second without calling i3status
+* I injected the result of a personal Py3status class printing the number of open tickets on our local GLPI system
