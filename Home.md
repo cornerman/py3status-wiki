@@ -13,12 +13,11 @@ These limitations are there by design as said in the [i3status](http://i3wm.org/
 
 > In i3status, we don’t want to implement process management again. Therefore, there is no module to run arbitrary scripts or commands. Instead, you should use your shell.
 
-## Achievements
-* Keep what i3status is good for and was designed to do (see above)
-* Do **not** replace i3status but **extend** it instead so that we can preserve all of i3status' advantages and configuration
-* It is very easy to start using `py3status` as **it won't interfere with your existing i3status settings**
-* It is easy to modify the existing i3status modules output
-* You can easily **write your own modules** and have them displayed on your i3bar automagically
+## Philosophy & goals
+* **no extra configuration file needed**
+* **rely on i3status**' strengths and its **existing configuration** as much as possible
+* **be extensible**, it must be easy for users to add their own stuff/output by writing a simple python class which will be loaded and executed dynamically
+* add some **built-in enhancement/transformation** of basic i3status modules output
 
 ## Example
 This is an example screenshot of my current i3bar using py3status :
