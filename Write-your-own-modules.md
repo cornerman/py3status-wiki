@@ -15,4 +15,4 @@ There is an internal cache layer on every user's module output controlled by the
 * You can **force your own cache timeout for a given module** by adding a `cached_until` key containing an epoch from time.time()
 
 ## Example class
-You can find an example class in the `examples` folder named **empty_class.py**
+You can find an example classes in the `examples` folder of the repository.
