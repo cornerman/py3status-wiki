@@ -10,6 +10,24 @@ When called with the `-i PATH` parameter (can be used more than once for multipl
 * Each method must return a **tuple** containing the **index** at which the output must be inserted in the final json and a i3bar-protocol compatible dict representing the output of your module.
 * Upon exit, call the **kill** method of every module if implemented.
 
+## Ordering your modules' output
+There are two methods to order your own modules' output on your i3bar. Just keep in mind that they are executed one after the other alphabetically and their output is inserted at index 0 of a list (unless you changed this).
+### setting the index value to your module's return tuple
+This is the preferred method as it gives you total control of what gets showed. Let's take an example of `module_a.py`, `module_b.py` and `module_c.py`.
+* `module_a.py` return tuple is (0, {'full_text' : 'module A', 'name' : 'modA'})
+* `module_b.py` return tuple is (0, {'full_text' : 'module B', 'name' : 'modB'})
+* `module_c.py` return tuple is (0, {'full_text' : 'module C', 'name' : 'modC'})
+
+You get on your bar : `module C | module B | module A`.
+
+Now to get `module A | module C | module B`, we'd modify the modules so that :
+* `module_a.py` return tuple is (0, {'full_text' : 'module A', 'name' : 'modA'}) _first executed, first added to output_
+* `module_b.py` return tuple is (1, {'full_text' : 'module B', 'name' : 'modB'}) _second executed, we want it at the right of A, so index is 1_
+* `module_c.py` return tuple is (1, {'full_text' : 'module C', 'name' : 'modC'}) _third executed, we want it also at the right of A, so index is also 1_
+
+### naming
+Simply change their name in the inclusion directory. **They'll appear in reverse order of their naming** in your bar because of the behavior explained above.
+
 ## Internal caching
 There is an internal cache layer on every user's module output controlled by the `-t CACHE_TIMEOUT` parameter (default 60 sec). This is meant as a convenience so you don't have to implement it yourself on every class you want included and to preserve your system performance.
 * You can disable it by setting `-t 0`.
