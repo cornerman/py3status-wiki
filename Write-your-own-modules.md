@@ -4,11 +4,11 @@
 When called with the `-i PATH` parameter (can be used more than once for multiple inclusions), `py3status` does the following :
 * Find any file within the directory with a `.py` extension
 * Check each file for a `Py3status` class
-* Import each method of the `Py3status` class excluding private and special methods (such as @staticmethod/@classmethod etc)
-* For every iteration, defined by the `-n INTERVAL` parameter (default 1sec), **call every method which was imported previously** except the **kill** method
+* Import each method of the `Py3status` class excluding : private (starting with _) and special methods (such as @staticmethod/@classmethod/@property)
+* For every iteration, defined by the `-n INTERVAL` parameter (default 1sec), **call every method** which was imported previously **except reserved methods** which are : `kill` and `on_click`
 * Each method is passed two arguments : the **json** (dict) representing the modules' results to be displayed on your bar and the **i3status_config** (dict) representing the i3status parsed configuration variables
-* Each method must return a **tuple** containing the **index** at which the output must be inserted in the final json and a i3bar-protocol compatible dict representing the output of your module.
-* Upon exit, call the **kill** method of every module if implemented.
+* Each method must return a **tuple** containing the **index/position** at which the output must be inserted in the final output and a i3bar-protocol compatible dict representing the output of your module.
+* Upon exit, call the `kill` method of every module if implemented.
 
 ## Ordering your modules' output
 There are two methods to order your own modules' output on your i3bar. Just keep in mind that they are executed one after the other alphabetically and their output is inserted at index 0 of a list (unless you changed this).
