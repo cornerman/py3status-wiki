@@ -10,6 +10,19 @@ When called with the `-i PATH` parameter (can be used more than once for multipl
 * Each method must return a **tuple** containing the **index/position** at which the output must be inserted in the final output and a i3bar-protocol compatible dict representing the output of your module.
 * Upon exit, call the `kill` method of every module if implemented.
 
+## Click events
+Click events are available since **i3 4.6**. `py3status` allows you to easily implement them on your modules by adding a `on_click` method to your Py3status class.
+
+### default behavior
+If your module's class do not implement a `on_click` method, py3status will react to **middle mouse clicks** on your module's output. Using the middle click on your output will result in **forcing a refresh** of the given module's method ouput.
+
+### implementing on_click
+To react specifically to click events, just add a `on_click` method to your Py3status class. This method gets one extra parameter, the event sent by the i3bar as a json/dict object. Example of event :
+
+`{'y': 13, 'x': 1737, 'button': 1, 'name': 'empty', 'instance': 'first'}`
+
+Click events are dispatched to the correct module thanks to the **name** and **instance** (if implemented) parameters. `py3status` will find out which module is responsible for the clicked element and execute this module's `on_click` method with the `i3status_output`, `i3status_config` and the `event_json` parameters.
+
 ## Ordering your modules' output
 There are two methods to order your own modules' output on your i3bar.
 * by setting the index position of your methods yourself
