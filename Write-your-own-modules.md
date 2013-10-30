@@ -29,7 +29,7 @@ There are two methods to order your own modules' output on your i3bar.
 * by renaming your modules' files
 
 ### ordering, behind the hood
-The main thing to understand is that your modules' output are -in an alphabetically respecting turn- inserted in a list based on the index position they returned.
+The main thing to understand is that your modules' output are - in an alphabetically respecting turn - inserted in a list based on the index position they returned.
 * **the index position** parameter returned by your methods specify the position you're wishing your output to be placed in that list.
 * **the first (top left) one element of a list is index 0**.
 * if two methods specify the same index position, they'll be ordered alphabetically.
@@ -60,9 +60,9 @@ This is the preferred method as it gives you total control of what gets showed a
 You get on your bar : `module A | module B | module C`.
 
 Now to get `module A | module C | module B`, we'd modify the modules so that :
-* `module_a.py` return tuple is (0, {'full_text' : 'module A', 'name' : 'modA'}) _first executed, first added to output_
-* `module_b.py` return tuple is (2, {'full_text' : 'module B', 'name' : 'modB'}) _second executed, we want it at the right of A, so index is 1_
-* `module_c.py` return tuple is (1, {'full_text' : 'module C', 'name' : 'modC'}) _third executed, we want it also at the right of A, so index is also 1_
+* `module_a.py` return tuple is (0, {'full_text' : 'module A', 'name' : 'modA'})
+* `module_b.py` return tuple is (2, {'full_text' : 'module B', 'name' : 'modB'})
+* `module_c.py` return tuple is (1, {'full_text' : 'module C', 'name' : 'modC'})
 
 ### naming
 Simply change their name in the inclusion directory and make sure all your modules' methods returns an index position of 0 (or at least the same position). **Your modules will appear in alphabetical order of their naming** in your bar.
