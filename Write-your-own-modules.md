@@ -72,5 +72,17 @@ There is an internal cache layer on every user's module output controlled by the
 * You can disable it by setting `-t 0`.
 * You can **force your own cache timeout for a given module** by adding a `cached_until` key containing an epoch from time.time()
 
+## Debugging
+You can run `py3status` with the `--debug` parameter to be able to monitor the your loaded modules and their ouput. `py3status` uses the standard **syslog** module so the actual logs are dispatched by your prefered syslog daemon in the **user** facility.
+* On Gentoo Linux using metalog : `/var/log/everything/current`
+* On Gentoo Linux using rsyslog : `/var/log/user.log`
+* On Arch Linux : `/var/run/user/<your login name>/i3` *(thx to @ShadowPrince)*
+
+Example output :
+
+> [py3status] module weather_yahoo.py click_events=False has_kill=False methods=dict_keys(['weather_yahoo'])
+
+> [py3status] method weather_yahoo returned {'name': 'weather_yahoo', 'full_text': '☁ ☂ ☂ ☂', 'cached_until': 1383864691.163709}
+
 ## Example class
 You can find an example classes in the `examples` folder of the repository.
