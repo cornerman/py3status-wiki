@@ -76,7 +76,7 @@ There is an internal cache layer on every user's module output controlled by the
 You can run `py3status` with the `--debug` parameter to be able to monitor the your loaded modules and their ouput. `py3status` uses the standard **syslog** module so the actual logs are dispatched by your prefered syslog daemon in the **user** facility.
 * On Gentoo Linux using metalog : `/var/log/everything/current`
 * On Gentoo Linux using rsyslog : `/var/log/user.log`
-* On Arch Linux : `/var/run/user/<your login name>/i3` *(thx to @ShadowPrince)*
+* On Arch Linux : `/var/run/user/${UID}/i3` *(thx to @ShadowPrince)*
 
 Example output :
 
