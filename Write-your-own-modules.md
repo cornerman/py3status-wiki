@@ -10,6 +10,10 @@ When called with the `-i PATH` parameter (can be used more than once for multipl
 * Each method must return a **tuple** containing the **index/position** at which the output must be inserted in the final output and a i3bar-protocol compatible dict representing the output of your module.
 * Upon exit, call the `kill` method of every module if implemented.
 
+### Remember
+* Do **NOT** use **print** on your modules : `py3status` will catch any output and discard it silently because this **would break your i3bar** (see [issue #20](https://github.com/ultrabug/py3status/issues/20) for details).
+* Make sure you **catch any output from any external program you may call from your module**. Any output from an external program cannot be caught and silenced by `py3status` and will break your i3bar so please, redirect any stdout/stderr to /dev/null for example (see [issue #20](https://github.com/ultrabug/py3status/issues/20) for details).
+
 ## Click events
 Click events are available since **i3 4.6**. `py3status` allows you to easily implement them on your modules by adding a `on_click` method to your Py3status class.
 
