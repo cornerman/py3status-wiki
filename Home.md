@@ -28,3 +28,6 @@ This is an example screenshot of my current i3bar using py3status :
 
 ## Add you own stuff
 See the [write your own modules](https://github.com/ultrabug/py3status/wiki/Write-your-own-modules) wiki page for more information.
+
+## Handle i3status click events (and more)
+See the [handle i3status and i3bar click events](https://github.com/ultrabug/py3status/wiki/handle-i3status-and-i3bar-click-events) wiki page for more information.
