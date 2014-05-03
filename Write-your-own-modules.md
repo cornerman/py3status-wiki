@@ -92,4 +92,4 @@ Example output :
 > [py3status] method weather_yahoo returned {'name': 'weather_yahoo', 'full_text': '☁ ☂ ☂ ☂', 'cached_until': 1383864691.163709}
 
 ## Example class
-You can find an example classes in the `examples` folder of the repository.
+You can find an example class in the `modules` folder of the repository, look at the **empty_class.py** file.
