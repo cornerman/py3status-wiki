@@ -1,7 +1,7 @@
 `py3status` v1.1 offers a special module named **i3bar_click_events.py** which permits you to easily take action when clicking on **any** module displayed on your i3bar. **This means that you can handle your i3status modules click events !**
 
 ## Usage
-First, you need to enable the `py3status` module which you can get from the _examples_ directory.
+First, you need to enable the `py3status` module which you can get from the **modules** directory.
 * If you don't use your own modules yet, create the folder _~/.i3/py3status/_
 * Then copy the **i3bar_click_events.py** file in this directory (or the one you're using to load your current modules from)
 
