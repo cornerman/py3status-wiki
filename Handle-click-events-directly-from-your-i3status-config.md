@@ -1,0 +1,1 @@
+This page will explain and demonstrate how py3status can let you simply handle i3bar click events directly from your current i3status.conf
