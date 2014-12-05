@@ -1,0 +1,1 @@
+This page will explain how to configure your py3status modules directly from your current i3status.conf
