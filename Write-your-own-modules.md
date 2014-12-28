@@ -14,6 +14,9 @@ When called with the `-i PATH` parameter (can be used more than once for multipl
 * Do **NOT** use **print** on your modules : `py3status` will catch any output and discard it silently because this **would break your i3bar** (see [issue #20](https://github.com/ultrabug/py3status/issues/20) for details).
 * Make sure you **catch any output from any external program you may call from your module**. Any output from an external program cannot be caught and silenced by `py3status` and will break your i3bar so please, redirect any stdout/stderr to /dev/null for example (see [issue #20](https://github.com/ultrabug/py3status/issues/20) for details).
 
+## Example class
+You can find an example class in the [py3status/modules](https://github.com/ultrabug/py3status/tree/master/py3status/modules) folder of the repository, look at the **empty_class.py** file.
+
 ## Filter i3status output
 You can change any of the i3status modules' output by modifying the **i3s_output_list** (list of dict) parameter received by your module !
 
@@ -104,6 +107,3 @@ Example output :
 > [py3status] module weather_yahoo.py click_events=False has_kill=False methods=dict_keys(['weather_yahoo'])
 
 > [py3status] method weather_yahoo returned {'full_text': '☁ ☂ ☂ ☂', 'cached_until': 1383864691.163709}
-
-## Example class
-You can find an example class in the [py3status/modules](https://github.com/ultrabug/py3status/tree/master/py3status/modules) folder of the repository, look at the **empty_class.py** file.
