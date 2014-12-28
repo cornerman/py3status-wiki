@@ -26,6 +26,9 @@ This is an example screenshot of my current i3bar using py3status :
 * I am using a color-enabled i3status with the standard `py3status` transformations, the colors are meaningful enough to spare the ": yes/no" of the _run-watch_ modules, also the clock ticks for every second without calling i3status
 * I injected the result of a Py3status class printing the number of open tickets on our local GLPI system.
 
+## Use available modules to extend your i3bar
+See the [load and order py3status modules directly from your i3status.conf](https://github.com/ultrabug/py3status/wiki/Load-and-order-py3status-modules-directly-from-your-current-i3status-config) wiki page for more information.
+
 ## Add you own stuff
 See the [write your own modules](https://github.com/ultrabug/py3status/wiki/Write-your-own-modules) wiki page for more information.
 
