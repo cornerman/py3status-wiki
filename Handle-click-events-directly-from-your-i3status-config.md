@@ -1,9 +1,11 @@
 Py3status (since v2) is **wrapping and extending your i3status.conf** and allows you directly handle **all** the i3bar click events on **any** of your configured modules whether they are i3status modules or py3status modules.
 
-To do so, all you have to do is add a new configuration parameter named `on_click [button number]` to your module config and py3status will then execute the given i3 command (using i3-msg).
+## on_click parameter
+All you have to do is add a new configuration parameter named `on_click [button number]` to your module config and py3status will then execute the given i3 command (using i3-msg).
 
 This means you can run simple tasks like executing a program or execute any other i3 specific command.
 
+## Examples
 Some examples below from i3status.conf :
 
     # reload the i3 config when I left click on the i3status time module
