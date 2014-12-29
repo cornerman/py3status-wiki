@@ -32,5 +32,5 @@ See the [load and order py3status modules directly from your i3status.conf](http
 ## Add you own stuff
 See the [write your own modules](https://github.com/ultrabug/py3status/wiki/Write-your-own-modules) wiki page for more information.
 
-## Handle i3status click events (and more)
-See the [handle i3status and i3bar click events](https://github.com/ultrabug/py3status/wiki/handle-i3status-and-i3bar-click-events) wiki page for more information.
+## Handle click events
+See the [handle click events directly from your i3status config](https://github.com/ultrabug/py3status/wiki/Handle-click-events-directly-from-your-i3status-config) wiki page for more information.
