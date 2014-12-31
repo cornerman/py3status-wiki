@@ -24,6 +24,7 @@ Some examples below from i3status.conf :
     # control the volume with your mouse
     # launch alsamixer when I left click
     # kill it when I right click
+    # toggle mute/unmute when I middle click
     # increase the volume when I scroll the mouse wheel up
     # decrease the volume when I scroll the mouse wheel down
     volume master {
@@ -32,6 +33,7 @@ Some examples below from i3status.conf :
         mixer = "Master"
         mixer_idx = 0
         on_click 1 = "exec i3-sensible-terminal alsamixer"
+        on_click 2 = "exec amixer set Master toggle"
         on_click 3 = "exec killall alsamixer"
         on_click 4 = "exec amixer set Master 1+"
         on_click 5 = "exec amixer set Master 1-"
