@@ -11,6 +11,11 @@ There are two commands you can pass to the on_click parameter that have a specia
 - **refresh** : This will refresh (expire the cache) of the clicked module
 - **refresh_all** : This will refresh **all** the modules from your i3bar (i3status included). This has the same effect has sending a SIGUSR1 to py3status.
 
+## using i3bar_click_events module ?
+All `i3bar_click_events` module users are advised to migrate away from this special module and use the new `on_click` parameter explained in this page. The `i3bar_click_events` module will still work and be used as a fallback to the new `on_click` parameter if it is loaded.
+
+This means that, for each module, **the `on_click` parameter overrides the click events configured in the `i3bar_click_events` module**.
+
 ## Examples
 Some examples below from i3status.conf :
 
