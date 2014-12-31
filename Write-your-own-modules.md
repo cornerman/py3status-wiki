@@ -39,6 +39,8 @@ Click events are dispatched to the correct module thanks to the **name** and **i
 ## Ordering your modules' output since py3status v2
 Since py3status v2 wraps your i3status configuration it will also respect the order defined by the i3status **order +=** parameters. All you have to do is add your module using the **order += "my module"** in the order of your choosing just like you do with any other i3status modules.
 
+Please note that once a py3status module is listed in the `order +=` parameters of your i3status.conf, this new mechanism **will take precedence over the legacy behavior** (explained below).
+
 ## Ordering your modules' output before py3status v2 (legacy)
 There are two methods to order your own modules' output on your i3bar.
 * by setting the index position of your methods yourself
