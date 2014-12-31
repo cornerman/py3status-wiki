@@ -32,7 +32,7 @@ Some examples below from i3status.conf :
         device = "default"
         mixer = "Master"
         mixer_idx = 0
-        on_click 1 = "exec i3-sensible-terminal alsamixer"
+        on_click 1 = "exec i3-sensible-terminal -e alsamixer"
         on_click 2 = "exec amixer set Master toggle"
         on_click 3 = "exec killall alsamixer"
         on_click 4 = "exec amixer set Master 1+"
