@@ -5,6 +5,12 @@ All you have to do is add a new configuration parameter named `on_click [button 
 
 This means you can run simple tasks like executing a program or execute any other i3 specific command.
 
+## special on_click commands
+There are two commands you can pass to the on_click parameter that have a special meaning to py3status :
+
+- **refresh** : This will refresh (expire the cache) of the clicked module
+- **refresh_all** : This will refresh **all** the modules from your i3bar (i3status included). This has the same effect has sending a SIGUSR1 to py3status.
+
 ## Examples
 Some examples below from i3status.conf :
 
@@ -13,6 +19,22 @@ Some examples below from i3status.conf :
     time {
         on_click 1 = "reload"
         on_click 2 = "restart"
+    }
+
+    # control the volume with your mouse
+    # launch alsamixer when I left click
+    # kill it when I right click
+    # increase the volume when I scroll the mouse wheel up
+    # decrease the volume when I scroll the mouse wheel down
+    volume master {
+        format = "♪: %volume"
+        device = "default"
+        mixer = "Master"
+        mixer_idx = 0
+        on_click 1 = "exec i3-sensible-terminal alsamixer"
+        on_click 3 = "exec killall alsamixer"
+        on_click 4 = "exec amixer set Master 1+"
+        on_click 5 = "exec amixer set Master 1-"
     }
 
     # run wicd-gtk GUI when I left click on the i3status ethernet module
@@ -31,6 +53,7 @@ Some examples below from i3status.conf :
         on_click 1 = "exec thunar /"
     }
 
+    # this is a py3status module configuration
     # open an URL on opera when I left click on the py3status weather_yahoo module
     weather_yahoo paris {
         cache_timeout = 1800
