@@ -21,7 +21,7 @@ Some examples below from i3status.conf :
         on_click 2 = "restart"
     }
 
-    # control the volume with your mouse
+    # control the volume with your mouse (need >i3-4.8)
     # launch alsamixer when I left click
     # kill it when I right click
     # toggle mute/unmute when I middle click
