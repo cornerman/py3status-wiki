@@ -1,4 +1,4 @@
-Py3status (since v2) also comes with some configurable modules you can **load and configure** directly from your i3status.conf just like any other i3status module.
+Py3status (since v2) also comes with some configurable modules you can **load and configure** directly **from your i3status.conf** just like any other i3status module.
 
 ## Available modules
 See the sources of each modules to know all its the configuration parameters.
