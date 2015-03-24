@@ -36,10 +36,11 @@ To react specifically to click events, just add a `on_click` method to your Py3s
 
 Click events are dispatched to the correct module thanks to the **name** and **instance** (if implemented) parameters. `py3status` will find out which module is responsible for the clicked element and execute this module's `on_click` method with the `i3status_output`, `i3s_config` and the `event_json` parameters.
 
-## Ordering your modules' output since py3status v2
+## Ordering your modules' output
 Since py3status v2 wraps your i3status configuration it will also respect the order defined by the i3status **order +=** parameters. All you have to do is add your module using the **order += "my module"** in the order of your choosing just like you do with any other i3status modules.
 
-Please note that once a py3status module is listed in the `order +=` parameters of your i3status.conf, this new mechanism **will take precedence over the legacy behavior** (explained below).
+See : [Load and order py3status modules directly from your current i3status config
+](https://github.com/ultrabug/py3status/wiki/Load-and-order-py3status-modules-directly-from-your-current-i3status-config)
 
 ## Internal caching
 There is an internal cache layer on every user's module output controlled by the `-t CACHE_TIMEOUT` parameter (default 60 sec). This is meant as a convenience so you don't have to implement it yourself on every class you want included and to preserve your system performance.
