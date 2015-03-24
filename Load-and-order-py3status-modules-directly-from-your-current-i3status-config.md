@@ -5,11 +5,6 @@ See the sources of each modules to know all its the configuration parameters.
 
 * [This is the list of all available modules](https://github.com/ultrabug/py3status/tree/master/py3status/modules)
 
-## Nota bene
-In order to respect the behavior of previous versions of py3status, all the modules present in inclusion folders (loaded by the `-i` command line flag) will be loaded automatically **unless you start using the new order += method described in this article**.
-
-This means that once a py3status module is listed in the `order +=` parameters of your i3status.conf, this new mechanism **will take precedence over the legacy behavior**.
-
 ## Loading a py3status module
 To load a py3status module you just have to **list it like any other i3status module** using the `order +=` parameter.
 
@@ -38,3 +33,8 @@ Your py3status modules are configured the exact same way as i3status modules, di
         user = 'mylogin'
         on_click 1 = "exec thunderbird"
     }
+
+## Nota bene for py3status v1.x users
+In order to respect the behavior of previous versions of py3status, all the modules present in inclusion folders (loaded by the `-i` command line flag) will be loaded automatically **unless you start using the new order += method described in this article**.
+
+This means that once a py3status module is listed in the `order +=` parameters of your i3status.conf, this new mechanism **will take precedence over the legacy behavior**.
