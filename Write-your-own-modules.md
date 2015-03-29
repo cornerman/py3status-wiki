@@ -32,7 +32,7 @@ If your module's class do not implement a `on_click` method, py3status will reac
 ### implementing on_click
 To react specifically to click events, just add a `on_click` method to your Py3status class. This method gets one extra parameter, the event sent by the i3bar as a json/dict object. Example of event :
 
-`{'y': 13, 'x': 1737, 'button': 1, 'name': 'empty', 'instance': 'first'}`
+`{'y': 13, 'x': 1737, 'button': 1, 'name': 'example', 'instance': 'first'}`
 
 Click events are dispatched to the correct module thanks to the **name** and **instance** (if implemented) parameters. `py3status` will find out which module is responsible for the clicked element and execute this module's `on_click` method with the `i3status_output`, `i3s_config` and the `event_json` parameters.
 
@@ -42,9 +42,9 @@ There is an internal cache layer on every user's module output controlled by the
 * You can **force your own cache timeout for a given module** by adding a `cached_until` key containing an epoch from time.time()
 
 ## Debugging
-As you can see in the **empty_class** module, you should be able to call your module directly from a shell using your python interpreter :
+As you can see in the **example_module** module, you should be able to call your module directly from a shell using your python interpreter :
 
-> python /path/to/module/empty_class.py
+> python /path/to/module/example_module.py
 
 Example output :
 
