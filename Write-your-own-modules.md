@@ -15,7 +15,7 @@ When called with the `-i PATH` parameter (can be used more than once for multipl
 * Make sure you **catch any output from any external program you may call from your module**. Any output from an external program cannot be caught and silenced by `py3status` and will break your i3bar so please, redirect any stdout/stderr to /dev/null for example (see [issue #20](https://github.com/ultrabug/py3status/issues/20) for details).
 
 ## Example module
-You can find an example module in the [doc/ folder](https://github.com/ultrabug/py3status/tree/master/doc) folder of the repository, look at the **example_module.py** file.
+You can find an example module in the [doc/](https://github.com/ultrabug/py3status/tree/master/doc) folder of the repository, look at the **example_module.py** file.
 
 ## Filter i3status output
 You can change any of the i3status modules' output by modifying the **i3s_output_list** (list of dict) parameter received by your module !
