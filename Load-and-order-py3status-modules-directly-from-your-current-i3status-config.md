@@ -34,6 +34,17 @@ Your py3status modules are configured the exact same way as i3status modules, di
         on_click 1 = "exec thunderbird"
     }
 
+### Universal Module Options
+As with i3status modules, you can configure [universal module options](http://i3wm.org/i3status/manpage.html#_universal_module_options) for each py3status module. These options are added to the response of the corresponding module and are then interpreted by [i3bar](https://i3wm.org/docs/i3bar-protocol.html#_blocks_in_detail). Currently the ```align```, ```min_width```, ```separator``` and ```separator_block_width``` options are supported. Example:
+
+    # configure the py3status window_title_async module
+    window_title_async {
+        align = center
+        min_width = 240
+        separator = false
+        separator_block_width = 20
+    }
+
 ## Nota bene for py3status v1.x users
 In order to respect the behavior of previous versions of py3status, all the modules present in inclusion folders (loaded by the `-i` command line flag) will be loaded automatically **unless you start using the new order += method described in this article**.
 
